@@ -72,7 +72,8 @@ locals {
     "arc_private_link_scope"         = "pls"
     "arc_gateway"                    = "arcgw"
     "batch_account"                  = "ba"
-    "cloud_service"                  = "cld"
+    "cloud_service"                  = "cld",
+    capacity_reservation_group       = "cap"
     "communication_service"          = "acs"
     "disk_encryption_set"            = "des"
     "function_app"                   = "func"
@@ -149,7 +150,7 @@ locals {
     "azure_monitor_alert_processing_rule" = "apr"
     "data_collection_endpoint"            = "dce"
     "deployment_script"                   = "script"
-    "log_analytics_workspace"             = "log"
+    "log_analytics_workspace"             = "la"
     "log_analytics_query_pack"            = "pack"
     "management_group"                    = "mg"
     "purview_instance"                    = "pview"
@@ -223,11 +224,12 @@ locals {
     "waf_policy_rule_group"           = "wafrg"
 
     # Storage
-    "backup_vault"         = "bvault"
-    "backup_vault_policy"  = "bkpol"
-    "file_share"           = "share"
-    "storage_account"      = "st"
-    "storage_sync_service" = "sss"
+    "backup_vault"               = "bvault"
+    "backup_vault_policy"        = "bkpol"
+    "file_share"                 = "share"
+    "storage_account"            = "st"
+    "storage_sync_service"       = "sss"
+    "azure_netapp_files_account" = "anf"
 
     # Virtual Desktop Infrastructure
     "virtual_desktop_host_pool"         = "vdpool"
