@@ -10,6 +10,12 @@ variable "resource_name" {
   default     = ""
 }
 
+variable "resource_group_name" {
+  type        = string
+  description = "Base name for the resource group of this resource without any naming convention applied. This value will be used in the NAME placeholder of the structure pattern (e.g., 'dc01', 'web01', 'core')."
+  default     = ""
+}
+
 variable "structure" {
   type        = string
   description = "Naming structure pattern using placeholders: ORG, REGION, ENV, PURPOSE, ARCH, TYPE, NAME. Example: 'TYPE-ORG-REGION-ENV-ARCH-NAME' produces 'vm-contoso-uks-prod-web-app01'."
@@ -60,12 +66,6 @@ variable "org_abbreviation" {
   description = "Organization or company abbreviation used in the ORG placeholder (e.g., 'contoso', 'acme', 'fabrikam'). Helps identify resources belonging to your organization."
 }
 
-variable "resource_group_name" {
-  type        = string
-  description = "[DEPRECATED] Direct resource group name override. This variable is maintained for backward compatibility but is not actively used. Use resource_group_structure for custom resource group naming."
-  default     = ""
-}
-
 variable "deployment_random_string" {
   type        = string
   description = "Random string to append for uniqueness in deployments (e.g., '7f3a', 'x9k2'). Useful for ensuring globally unique names or identifying specific deployment instances. Optional."
@@ -75,6 +75,12 @@ variable "deployment_random_string" {
 variable "resource_name_overwrite" {
   type        = bool
   description = "Bypass naming convention and use resource_name exactly as provided without applying any structure pattern. Useful for legacy systems or externally mandated names. Default: false."
+  default     = false
+}
+
+variable "resource_group_name_overwrite" {
+  type        = bool
+  description = "Bypass naming convention and use resource_group_name exactly as provided without applying any structure pattern. Useful for legacy systems or externally mandated names. Default: false."
   default     = false
 }
 
