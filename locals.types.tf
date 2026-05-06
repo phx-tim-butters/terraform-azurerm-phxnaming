@@ -150,7 +150,7 @@ locals {
     "azure_monitor_alert_processing_rule" = "apr"
     "data_collection_endpoint"            = "dce"
     "deployment_script"                   = "script"
-    "log_analytics_workspace"             = "la"
+    "log_analytics_workspace"             = "log"
     "log_analytics_query_pack"            = "pack"
     "management_group"                    = "mg"
     "purview_instance"                    = "pview"
