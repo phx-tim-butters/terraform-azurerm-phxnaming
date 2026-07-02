@@ -46,7 +46,13 @@ variable "resource_group_purpose" {
 
 variable "archetype" {
   type        = string
-  description = "Workload archetype or classification used in the ARCH placeholder (e.g., 'web', 'data', 'sec' for security, 'net' for networking, 'id' for identity). Defines the application or infrastructure pattern."
+  description = "Archetype or category of the resource, used in the ARCH placeholder (e.g., 'web', 'db', 'api'). Optional, leave empty if not using ARCH in your structure."
+  default     = ""
+}
+
+variable "workload_abbreviation" {
+  type        = string
+  description = "Workload  used in the WORK placeholder (e.g., 'web', 'data', 'sec' for security, 'net' for networking, 'id' for identity). Defines the application or infrastructure pattern."
 }
 
 variable "env_abbreviation" {
