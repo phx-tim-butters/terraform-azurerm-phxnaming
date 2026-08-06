@@ -53,6 +53,7 @@ variable "archetype" {
 variable "workload_abbreviation" {
   type        = string
   description = "Workload  used in the WORK placeholder (e.g., 'web', 'data', 'sec' for security, 'net' for networking, 'id' for identity). Defines the application or infrastructure pattern."
+  default     = ""
 }
 
 variable "env_abbreviation" {
