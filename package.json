@@ -1,0 +1,27 @@
+{
+  "name": "terraform-azurerm-phxnaming",
+  "version": "1.0.0",
+  "description": "A simple, flexible Terraform module for generating consistent Azure resource names based on a user-defined naming structure. This module ensures uniform naming conventions across single or multiple resources, making it ideal for organizations that need standardized resource naming across their Azure infrastructure.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phx-tim-butters/terraform-azurerm-phxnaming.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/phx-tim-butters/terraform-azurerm-phxnaming/issues"
+  },
+  "homepage": "https://github.com/phx-tim-butters/terraform-azurerm-phxnaming#readme",
+  "devDependencies": {
+    "release-it": "^21.0.1"
+  }
+}

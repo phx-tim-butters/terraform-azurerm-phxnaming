@@ -1,4 +1,46 @@
-.terraform/
-*.tfstate*
-terraform-azurerm-naming
-.terraform.lock.hcl
+# npm stuff
+
+node_modules/
+
+# Local .terraform files and dir
+**/.terraform/*
+**/.terraform*
+**/terraform.tfstate*
+**/examples/**/*.tfvars
+
+# Infracost
+.Infracost/*
+.infracost/*
+**/.Infracost/*
+**/.infracost/*
+
+# Local Env Files
+
+**/env.sh
+**/env.ps1
+
+# Files
+
+**/.alzlib
+
+# Allow for local Development Work
+
+**/*dev*.backend
+**/*env.ps1
+**/*env*.ps1
+**/*env.sh
+**/*env*.sh
+*.tfstate
+*.tfstate.*
+**/.terraform/*
+**/.terraform*
+!.terraform-docs.yml
+**/*.hcl
+!**/*terragrunt.hcl
+!**/*tflint.global.hcl
+**/*-dev.backend
+
+# Files
+
+**/.alzlib
+/AMBA/*
