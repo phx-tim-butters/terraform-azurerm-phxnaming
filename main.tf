@@ -23,7 +23,7 @@ locals {
     "${local.random_resource_name}${local.completed_deploy_abbreviation}"
   )
 
-  replaced_global_resource_name  = replace(local.completed_resource_name, "-", "")
+  replaced_global_resource_name  = replace(replace(local.completed_resource_name, "-", ""), "_", "")
   truncated_global_resource_name = length(local.replaced_global_resource_name) > 24 ? substr(local.replaced_global_resource_name, 1, 24) : local.replaced_global_resource_name
 
   # Marker to the last completed resource (and global) name, takes into consideration all previous requires replacement and steps
