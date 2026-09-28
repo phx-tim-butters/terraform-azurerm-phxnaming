@@ -1,5 +1,5 @@
 locals {
-  completed_location            = local.region_abbreviation[var.location]
+  completed_location            = try(var.region_code_overrides[var.location], module.regions[0].regions[0].geo_code)
   completed_deploy_abbreviation = var.deploy_abbreviation == "" ? "" : "-${var.deploy_abbreviation}"
 }
 
