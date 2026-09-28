@@ -9,3 +9,7 @@ output "global_name" {
 output "resource_group_name" {
   value = var.case_option == "upper" ? upper(local.returned_resource_group_name) : var.case_option == "lower" ? lower(local.returned_resource_group_name) : local.returned_resource_group_name
 }
+
+output "region_details" {
+  value = module.regions[0].regions
+}

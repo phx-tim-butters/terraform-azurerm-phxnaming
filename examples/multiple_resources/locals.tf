@@ -1,8 +1,10 @@
 locals {
-  org_abbreviation = "org1"
-  structure        = "TYPE-ORG-REGION-ARCH-NAME"
-  location         = "uksouth"
-  archetype        = "prod"
+  org_abbreviation      = "org1"
+  structure             = "TYPE-ORG-REGION-ARCH-NAME"
+  default_location      = "uksouth"
+  archetype             = "prod"
+  workload_abbreviation = "prod"
+  deploy_abbreviation   = ""
 
   resource_group_name = "test"
 
@@ -10,6 +12,11 @@ locals {
     virtual_network = {
       resource_type = "virtual_network"
       resource_name = "prod-spoke"
+    }
+    virtual_network_sweden = {
+      resource_type = "virtual_network"
+      resource_name = "prod-spoke"
+      location      = "swedencentral"
     }
     sa_intermediate = {
       resource_type = "storage_account"

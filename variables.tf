@@ -100,3 +100,21 @@ variable "case_option" {
     error_message = "Case option must be one of: 'none', 'upper', 'lower'."
   }
 }
+
+variable "resource_type_overrides" {
+  type        = map(string)
+  description = "Permit overriding the default naming convention for specific resource types. The map should have resource type keys and corresponding name format strings as values."
+  default     = {}
+}
+
+variable "region_code_overrides" {
+  type        = map(string)
+  description = "Permit overriding the default region codes for specific regions. The map should have region keys and corresponding code strings as values."
+  default     = {}
+}
+
+variable "enable_region_lookup" {
+  type        = bool
+  description = "Enable or disable the lookup of Azure region codes using the external module. Default: false."
+  default     = true
+}
