@@ -36,6 +36,7 @@ node_modules/
 **/.terraform*
 !.terraform-docs.yml
 **/*.hcl
+!**/*.tftest.hcl
 !**/*terragrunt.hcl
 !**/*tflint.global.hcl
 **/*-dev.backend
